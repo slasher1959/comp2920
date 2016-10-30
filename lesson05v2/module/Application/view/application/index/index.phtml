@@ -1,0 +1,24 @@
+
+<?php
+
+	if(isset($this->message))
+	{
+		echo $this->message;
+
+	}
+/*	if(isset($this->age)){
+		echo $this->age;
+	}
+	echo (isset($this->age) ? $age : 'goto');*/
+
+
+?>
+
+
+<form method="post" action="">
+	UserName: <input type="text" name="uname" value="<?php echo $this->uname; ?>"></br></br>
+    Email: <input type="text" name="emailAddress" value="<?php echo $this->emailAddress; ?>"></br></br>
+	Age: <input type="text" name="age" value="<?php echo $this->age; ?>">
+		<input type="submit">
+
+</form>
