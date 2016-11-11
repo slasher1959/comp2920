@@ -8,9 +8,9 @@
 
 namespace Album;
 
-use Zend\DB\Adapter\AdapterInterface;
-use Zend\DB\ResultSet\ResultSet;
-use Zend\DB\TableGateway\TableGateway;
+use Zend\Db\Adapter\AdapterInterface;
+use Zend\Db\ResultSet\ResultSet;
+use Zend\Db\TableGateway\TableGateway;
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 
 class Module implements ConfigProviderInterface
