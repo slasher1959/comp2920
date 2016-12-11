@@ -15,7 +15,16 @@ class GalleryController extends AbstractActionController
     public function indexAction()
     {
         $this->layout()->galleryLinkActive = true;
-        return new ViewModel();
+        $files = scandir(getcwd() . '/public/img/thumbnails/');
+
+
+        unset($files[0], $files[1]);
+
+        foreach ($files as $filename)   {
+            echo $myFiles[] = $filename;
+        }
+
+        return new ViewModel(['myFiles' => $myFiles]);
     }
 
     public function detailsAction()
