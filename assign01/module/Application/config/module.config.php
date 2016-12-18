@@ -47,7 +47,7 @@ return [
             'gallery_details' => [
                 'type'    => Segment::class,
                 'options' => [
-                    'route'    => '/gallery/details',
+                    'route'    => '/details[/[:id]]',
                     'defaults' => [
                         'controller' => Controller\GalleryController::class,
                         'action'     => 'details',

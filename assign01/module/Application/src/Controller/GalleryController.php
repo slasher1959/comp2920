@@ -20,15 +20,21 @@ class GalleryController extends AbstractActionController
 
         unset($files[0], $files[1]);
 
-        foreach ($files as $filename)   {
-            echo $myFiles[] = $filename;
-        }
+/*        foreach ($files as $filename)   {
+            $myFiles[] = $filename;
+        }*/
 
-        return new ViewModel(['myFiles' => $myFiles]);
+//        return new ViewModel(['myFiles' => $myFiles]);
+        return new ViewModel(['files' => $files]);
     }
 
     public function detailsAction()
     {
-        return new ViewModel();
+//        echo $this->getRequest()->getQuery('id');
+//        echo $this->params()->fromRoute('id');
+        $file = $this->getRequest()->getQuery('id');
+        $fileName[] = ['id' => $file];
+        var_dump($fileName);
+        return new ViewModel($fileName);
     }
 }
